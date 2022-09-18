@@ -75,7 +75,7 @@ static void semgrep_help(sqlite3_context *context, int argc, sqlite3_value **arg
 static void semgrep_scan(sqlite3_context *context, int argc, sqlite3_value **argv) {
 
 
-    char filename[] = "/tmp/semgrep-sqlite.XXXXXXXX";
+    char filename[] = "/tmp/sqlite-semgrep.XXXXXXXX";
 
     int fd = mkstemp(filename);
     char* content = sqlite3_value_text(argv[2]);
